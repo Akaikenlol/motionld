@@ -2,10 +2,11 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Card from "./Card";
 
 const Body = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<>
+		<div className="gap-5">
 			<AnimatePresence>
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
@@ -17,7 +18,7 @@ const Body = ({ children }: { children: React.ReactNode }) => {
 					{children}
 				</motion.div>
 			</AnimatePresence>
-		</>
+		</div>
 	);
 };
 
